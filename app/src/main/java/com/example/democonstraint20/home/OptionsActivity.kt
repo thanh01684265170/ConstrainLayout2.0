@@ -11,6 +11,7 @@ import com.example.democonstraint20.constraintset.MovieActivity
 import com.example.democonstraint20.contrainstate.ConstraintLayoutStatesExampleActivity
 import com.example.democonstraint20.miagefilter.ImageFilterViewActivity
 import com.example.democonstraint20.motionlayout.MotionActivity
+import com.example.democonstraint20.motionlayout.MotionBasicActivity
 import com.example.democonstraint20.motionlayout.MotionKeyFrameActivity
 import com.example.democonstraint20.motionlayout.RecyclerViewSwipeMotionActivity
 import kotlinx.android.synthetic.main.activity_options.*
@@ -47,6 +48,10 @@ class OptionsActivity : AppCompatActivity() {
 
         buttonKeyFrame.setOnClickListener{
             startActivity(Intent(this, MotionKeyFrameActivity::class.java))
+        }
+
+        buttonMotionBasic.setOnClickListener{
+            startActivity(Intent(this, MotionBasicActivity::class.java))
         }
     }
 }

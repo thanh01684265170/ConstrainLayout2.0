@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     app:layoutDescription="@xml/motion_sompare_collapsing"
     app:showPaths="true"
-    tools:context=".MainActivity"
     tools:showPaths="true">
 
     <androidx.recyclerview.widget.RecyclerView

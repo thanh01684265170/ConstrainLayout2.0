@@ -1,6 +1,7 @@
 package com.example.democonstraint20.miagefilter
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.SeekBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.utils.widget.ImageFilterView
@@ -22,7 +23,6 @@ class ImageFilterViewActivity : AppCompatActivity() {
             .apply(RequestOptions().diskCacheStrategy(DiskCacheStrategy.NONE))
             .load("https://source.unsplash.com/1600x900/?lego")
             .into(imageFilterView)
-
         setupSeekBars()
     }
 

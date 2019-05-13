@@ -20,6 +20,10 @@ class ConstraintLayoutStatesExampleActivity : AppCompatActivity() {
             stateConstraintLayout.setState(R.id.loading, 0, 0)
             postDelayed(handler,  {
                 stateConstraintLayout.setState(if (changed) R.id.start else R.id.end,0, 0)
+                if(changed)
+                    buttonBakeCake.text = "login"
+                else
+                    buttonBakeCake.text = "try again"
                 changed = !changed
             },null ,3000L)
         }
