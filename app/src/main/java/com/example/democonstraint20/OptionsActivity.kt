@@ -31,6 +31,10 @@ class OptionsActivity : AppCompatActivity() {
         buttonSwipeRecyclerView.setOnClickListener {
             startActivity(Intent(this, RecyclerViewSwipeMotionActivity::class.java))
         }
+
+        buttonMotionCompare.setOnClickListener{
+            startActivity(Intent(this,MotionActivity::class.java))
+        }
     }
 }
 

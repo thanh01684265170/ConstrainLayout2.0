@@ -65,7 +65,7 @@ class RecyclerViewSwipeMotionActivity : AppCompatActivity(){
     data class Email(val name: String, val subject: String)
 
 
-    class EmailAdapter: ListAdapter<Email, EmailViewHolder>(DIFFER){
+    class EmailAdapter: ListAdapter<Email, EmailViewHolder>(DIFFUTIL){
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EmailViewHolder {
             return EmailViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.list_item_email, parent, false))
         }
@@ -75,7 +75,7 @@ class RecyclerViewSwipeMotionActivity : AppCompatActivity(){
         }
 
         companion object {
-            val DIFFER = object : DiffUtil.ItemCallback<Email>() {
+            val DIFFUTIL = object : DiffUtil.ItemCallback<Email>() {
                 override fun areItemsTheSame(oldItem: Email, newItem: Email): Boolean {
                     return oldItem == newItem
                 }

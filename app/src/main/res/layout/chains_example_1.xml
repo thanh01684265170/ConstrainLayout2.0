@@ -25,7 +25,6 @@
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toStartOf="@+id/button_three"
         app:layout_constraintHorizontal_bias="0.5"
-
         app:layout_constraintStart_toEndOf="@+id/button2"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
         tools:text="2" />
@@ -110,7 +109,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         app:layout_constraintEnd_toStartOf="@+id/button11"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
@@ -137,4 +135,5 @@
         app:layout_constraintStart_toEndOf="@+id/button11"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
         tools:text="3" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
