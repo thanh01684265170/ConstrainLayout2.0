@@ -1,9 +1,10 @@
-package com.example.democonstraint20
+package com.example.democonstraint20.contrainstate
 
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.os.HandlerCompat.postDelayed
+import com.example.democonstraint20.R
 import kotlinx.android.synthetic.main.activity_cl_states_end.*
 
 class ConstraintLayoutStatesExampleActivity : AppCompatActivity() {

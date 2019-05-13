@@ -1,10 +1,11 @@
-package com.example.democonstraint20
+package com.example.democonstraint20.widget
 
 import android.content.Context
 import android.util.AttributeSet
 import android.view.View
 import android.widget.FrameLayout
 import android.widget.TextView
+import com.example.democonstraint20.R
 
 
 class RatingView : FrameLayout {
@@ -27,7 +28,8 @@ class RatingView : FrameLayout {
     }
 
     fun init(attributeSet: AttributeSet?) {
-        val attributes = context.theme.obtainStyledAttributes(attributeSet, R.styleable.MovieRatingView, 0, 0)
+        val attributes = context.theme.obtainStyledAttributes(attributeSet,
+            R.styleable.MovieRatingView, 0, 0)
         val ratingText: Float
         try {
             ratingText = attributes.getFloat(R.styleable.MovieRatingView_rating, 0f)

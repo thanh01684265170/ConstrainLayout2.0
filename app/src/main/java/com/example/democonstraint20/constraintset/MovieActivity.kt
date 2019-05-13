@@ -1,11 +1,10 @@
-package com.example.democonstraint20
+package com.example.democonstraint20.constraintset
 
 import android.os.Bundle
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
 import androidx.appcompat.app.AppCompatActivity
 import android.transition.TransitionManager
-import android.widget.ImageView
+import com.example.democonstraint20.R
 import kotlinx.android.synthetic.main.activity_movie_rental.*
 
 class MovieActivity : AppCompatActivity() {

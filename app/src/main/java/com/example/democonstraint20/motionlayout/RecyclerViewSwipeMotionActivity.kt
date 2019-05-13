@@ -1,4 +1,4 @@
-package com.example.democonstraint20
+package com.example.democonstraint20.motionlayout
 
 import android.content.Context
 import android.os.Bundle
@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.example.democonstraint20.R
 import com.google.android.material.bottomappbar.BottomAppBarTopEdgeTreatment
 import com.google.android.material.shape.CornerTreatment
 import com.google.android.material.shape.MaterialShapeDrawable
@@ -20,7 +21,7 @@ import com.google.android.material.shape.ShapePathModel
 import kotlinx.android.synthetic.main.activity_swipe_recycler_view.*
 import kotlinx.android.synthetic.main.list_item_email.view.*
 
-class RecyclerViewSwipeMotionActivity : AppCompatActivity(){
+class RecyclerViewSwipeMotionActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,7 +41,7 @@ class RecyclerViewSwipeMotionActivity : AppCompatActivity(){
         }
         background_view.background = backgroundDrawable
 
-        val listItems = listOf(Email("Rebecca Franks", "It's the holidays!"),
+        val listItems = listOf(
             Email("Rebecca Franks", "It's the holidays!"),
             Email("Rebecca Franks", "It's the holidays!"),
             Email("Rebecca Franks", "It's the holidays!"),
@@ -49,7 +50,9 @@ class RecyclerViewSwipeMotionActivity : AppCompatActivity(){
             Email("Rebecca Franks", "It's the holidays!"),
             Email("Rebecca Franks", "It's the holidays!"),
             Email("Rebecca Franks", "It's the holidays!"),
-            Email("Rebecca Franks", "It's the holidays!"))
+            Email("Rebecca Franks", "It's the holidays!"),
+            Email("Rebecca Franks", "It's the holidays!")
+        )
 
         val emailAdapter = EmailAdapter()
 
@@ -65,7 +68,7 @@ class RecyclerViewSwipeMotionActivity : AppCompatActivity(){
     data class Email(val name: String, val subject: String)
 
 
-    class EmailAdapter: ListAdapter<Email, EmailViewHolder>(DIFFUTIL){
+    class EmailAdapter : ListAdapter<Email, EmailViewHolder>(DIFFUTIL) {
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EmailViewHolder {
             return EmailViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.list_item_email, parent, false))
         }
@@ -89,7 +92,7 @@ class RecyclerViewSwipeMotionActivity : AppCompatActivity(){
 
     class EmailViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        fun bind(email : Email){
+        fun bind(email: Email) {
             itemView.textViewEmailName.text = email.name
             itemView.textViewSubject.text = email.subject
         }

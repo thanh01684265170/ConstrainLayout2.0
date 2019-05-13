@@ -1,4 +1,5 @@
-package com.example.democonstraint20
+package com.example.democonstraint20.motionlayout
+
 
 import android.view.LayoutInflater
 import android.view.View

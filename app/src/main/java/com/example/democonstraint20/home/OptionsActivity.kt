@@ -1,9 +1,18 @@
-package com.example.democonstraint20
+package com.example.democonstraint20.home
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import com.example.democonstraint20.R
+import com.example.democonstraint20.circular.CircularConstraintActivity
+import com.example.democonstraint20.constraintset.CupcakeActivity
+import com.example.democonstraint20.constraintset.MovieActivity
+import com.example.democonstraint20.contrainstate.ConstraintLayoutStatesExampleActivity
+import com.example.democonstraint20.miagefilter.ImageFilterViewActivity
+import com.example.democonstraint20.motionlayout.MotionActivity
+import com.example.democonstraint20.motionlayout.MotionKeyFrameActivity
+import com.example.democonstraint20.motionlayout.RecyclerViewSwipeMotionActivity
 import kotlinx.android.synthetic.main.activity_options.*
 
 class OptionsActivity : AppCompatActivity() {
@@ -33,7 +42,11 @@ class OptionsActivity : AppCompatActivity() {
         }
 
         buttonMotionCompare.setOnClickListener{
-            startActivity(Intent(this,MotionActivity::class.java))
+            startActivity(Intent(this, MotionActivity::class.java))
+        }
+
+        buttonKeyFrame.setOnClickListener{
+            startActivity(Intent(this, MotionKeyFrameActivity::class.java))
         }
     }
 }

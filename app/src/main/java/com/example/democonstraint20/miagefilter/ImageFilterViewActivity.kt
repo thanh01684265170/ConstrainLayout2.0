@@ -1,4 +1,4 @@
-package com.example.democonstraint20
+package com.example.democonstraint20.miagefilter
 
 import android.os.Bundle
 import android.widget.SeekBar
@@ -7,6 +7,7 @@ import androidx.constraintlayout.utils.widget.ImageFilterView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
+import com.example.democonstraint20.R
 import kotlinx.android.synthetic.main.imagefilterview.*
 
 class ImageFilterViewActivity : AppCompatActivity() {
