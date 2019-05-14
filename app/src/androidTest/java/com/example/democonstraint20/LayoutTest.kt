@@ -16,6 +16,17 @@ class LayoutTest {
 
     private val layoutInflater by lazy { LayoutInflater.from(getInstrumentation().targetContext) }
 
+    companion object {
+        private const val TAG = "ThanhTest"
+
+        private const val REPEATS = 1_000
+
+        private const val LINEAR = "linear:\t\t"
+        private const val FRAME = "frame:\t\t"
+        private const val RELATIVE = "relative:\t\t"
+        private const val CONSTRAINT = "constraint:\t"
+    }
+
     @Test
     fun test_item1() {
         Log.i(TAG, "test 1")
@@ -69,21 +80,13 @@ class LayoutTest {
         for (i in 0 until REPEATS) {
             layoutInflater.inflate(layoutRes, null).apply {
                 layoutParams = ViewGroup.LayoutParams(0, 0)
-                measure(View.MeasureSpec.makeMeasureSpec(1000, View.MeasureSpec.EXACTLY),
-                        View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED))
+                measure(
+                    View.MeasureSpec.makeMeasureSpec(1000, View.MeasureSpec.EXACTLY),
+                    View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED)
+                )
                 layout(0, 0, measuredWidth, measuredHeight)
             }
         }
     }
 
-    companion object {
-        private const val TAG = "###test"
-
-        private const val REPEATS = 1_000
-
-        private const val LINEAR = "linear:\t\t"
-        private const val FRAME = "frame:\t\t"
-        private const val RELATIVE = "relative:\t"
-        private const val CONSTRAINT = "constraint:\t"
-    }
 }

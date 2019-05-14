@@ -14,6 +14,8 @@ import com.example.democonstraint20.motionlayout.MotionActivity
 import com.example.democonstraint20.motionlayout.MotionBasicActivity
 import com.example.democonstraint20.motionlayout.MotionKeyFrameActivity
 import com.example.democonstraint20.motionlayout.RecyclerViewSwipeMotionActivity
+import com.example.democonstraint20.recyclerliner.LinearActivity
+import com.example.democonstraint20.recyclerperconstrain.ConstrainActivity
 import kotlinx.android.synthetic.main.activity_options.*
 
 class OptionsActivity : AppCompatActivity() {
@@ -27,7 +29,14 @@ class OptionsActivity : AppCompatActivity() {
         cupcakeDemo.setOnClickListener { startActivity(Intent(this, CupcakeActivity::class.java)) }
 
         val circularConstraintDemo = findViewById<Button>(R.id.button_circular_demo)
-        circularConstraintDemo.setOnClickListener { startActivity(Intent(this, CircularConstraintActivity::class.java)) }
+        circularConstraintDemo.setOnClickListener {
+            startActivity(
+                Intent(
+                    this,
+                    CircularConstraintActivity::class.java
+                )
+            )
+        }
 
         val imageFilterDemo = findViewById<Button>(R.id.buttonImageFilterView)
         imageFilterDemo.setOnClickListener {
@@ -42,17 +51,26 @@ class OptionsActivity : AppCompatActivity() {
             startActivity(Intent(this, RecyclerViewSwipeMotionActivity::class.java))
         }
 
-        buttonMotionCompare.setOnClickListener{
+        buttonMotionCompare.setOnClickListener {
             startActivity(Intent(this, MotionActivity::class.java))
         }
 
-        buttonKeyFrame.setOnClickListener{
+        buttonKeyFrame.setOnClickListener {
             startActivity(Intent(this, MotionKeyFrameActivity::class.java))
         }
 
-        buttonMotionBasic.setOnClickListener{
+        buttonMotionBasic.setOnClickListener {
             startActivity(Intent(this, MotionBasicActivity::class.java))
         }
+
+        button_recycler_linear.setOnClickListener {
+            startActivity(Intent(this, LinearActivity::class.java))
+        }
+
+        button_recycler_constrain.setOnClickListener {
+            startActivity(Intent(this, ConstrainActivity::class.java))
+        }
+
     }
 }
 

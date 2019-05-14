@@ -33,6 +33,8 @@
         <activity android:name=".motionlayout.MotionActivity" />
         <activity android:name=".motionlayout.MotionKeyFrameActivity"/>
         <activity android:name=".motionlayout.MotionBasicActivity"/>
+        <activity android:name=".recyclerperconstrain.ConstrainActivity"/>
+        <activity android:name=".recyclerliner.LinearActivity"/>
     </application>
 
 </manifest>
