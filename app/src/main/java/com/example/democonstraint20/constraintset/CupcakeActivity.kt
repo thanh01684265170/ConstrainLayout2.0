@@ -19,8 +19,8 @@ class CupcakeActivity : AppCompatActivity() {
         val constraintSet1 = ConstraintSet()
         val constraintSet2 = ConstraintSet()
 
-        constraintSet2.clone(this, R.layout.animation_example_2_transition)
-        setContentView(R.layout.animation_example_2)
+        constraintSet2.clone(this, R.layout.activity_cupcake_2)
+        setContentView(R.layout.activity_cupcake_1)
 
         val constraintLayout = findViewById<ConstraintLayout>(R.id.constraint_layout)
         constraintSet1.clone(constraintLayout)
