@@ -1,28 +1,16 @@
 package com.example.democonstraint20.miagefilter
 
 import android.os.Bundle
-import android.util.Log
 import android.widget.SeekBar
 import androidx.appcompat.app.AppCompatActivity
-import androidx.constraintlayout.utils.widget.ImageFilterView
-import com.bumptech.glide.Glide
-import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.bumptech.glide.request.RequestOptions
 import com.example.democonstraint20.R
 import kotlinx.android.synthetic.main.imagefilterview.*
 
 class ImageFilterViewActivity : AppCompatActivity() {
 
-    private lateinit var imageFilterView : ImageFilterView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.imagefilterview)
-        imageFilterView = findViewById(R.id.imageFilterView)
-        Glide.with(this)
-            .asBitmap()
-            .apply(RequestOptions().diskCacheStrategy(DiskCacheStrategy.NONE))
-            .load("https://source.unsplash.com/1600x900/?lego")
-            .into(imageFilterView)
         setupSeekBars()
     }
 
